@@ -44,3 +44,57 @@ test('scores a double strike frame', () => {
   const actual = score.scoreFrame(frame, frame2, frame3)
   expect(actual).toBe(expected)
 })
+
+test('scores a simple game', () => {
+  const game = [
+    [1, 1],
+    [1, 1],
+    [1, 1],
+    [1, 1],
+    [1, 1],
+    [1, 1],
+    [1, 1],
+    [1, 1],
+    [1, 1],
+    [1, 1],
+  ]
+  const expected = 20
+  const actual = score.gameTotal(game)
+  expect(actual).toBe(expected)
+})
+
+test('scores a game with double strike and spares', () => {
+  const game = [
+    [10, 0],
+    [2, 3],
+    [7, 3],
+    [4, 5],
+    [10, 0],
+    [10, 0],
+    [5, 3],
+    [4, 3],
+    [5, 5],
+    [2, 3],
+  ]
+  const expected = 118
+  const actual = score.gameTotal(game)
+  expect(actual).toBe(expected)
+})
+
+test('scores a perfect game', () => {
+  const game = [
+    [10, 0],
+    [10, 0],
+    [10, 0],
+    [10, 0],
+    [10, 0],
+    [10, 0],
+    [10, 0],
+    [10, 0],
+    [10, 0],
+    [10, 10, 10],
+  ]
+  const expected = 300
+  const actual = score.gameTotal(game)
+  expect(actual).toBe(expected)
+})

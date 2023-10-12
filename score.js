@@ -1,4 +1,4 @@
-export { scoreFrame }
+export { scoreFrame, gameTotal }
 
 function scoreFrame(frame, frame2, frame3) {
   // double strike
@@ -15,4 +15,13 @@ function scoreFrame(frame, frame2, frame3) {
   }
   // normal sum
   else return frame.reduce((a, b) => a + b)
+}
+
+function gameTotal(game) {
+  let totals = 0
+  for (let i = 0; i < game.length; i++) {
+    totals += scoreFrame(game[i], game[i + 1], game[i + 2])
+  }
+
+  return totals
 }
