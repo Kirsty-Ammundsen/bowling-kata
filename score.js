@@ -1,25 +1,10 @@
 export { scoreFrame, gameTotal }
 
-const game1 = [
-  [1, 2],
-  [6, 4],
-  [5, 4],
-  [10, 0],
-  [7, 2],
-  [10, 0],
-  [10, 0],
-  [5, 2],
-  [7, 0],
-  [4, 4],
-]
-
-gameTotal(game1)
-
 function scoreFrame(frame, frame2, frame3) {
   // double strike
   if (frame[0] === 10 && frame2[0] === 10) {
     console.log('double strike ')
-    return frame[0] + frame2[0] + frame3.reduce((a, b) => a + b)
+    return frame[0] + frame2[0] + frame3[0]
   }
   // single strike
   if (frame[0] === 10) {
