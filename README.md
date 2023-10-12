@@ -13,15 +13,15 @@ This kata aims to help you become familiar with test-first design, also commonly
 
 ### 0. Preparing a test runner
 
-- [ ] `npm install -D vitest`
-- [ ] Change the `test` script in `package.json` to `"vitest"`
+- [x] `npm install -D vitest`
+- [x] Change the `test` script in `package.json` to `"vitest"`
 
 -----
 ## Tests (which drive development)
 
 ### 1. Create a sample test
 
-- [ ] Create a test that will always pass
+- [x] Create a test that will always pass
   <details style="padding-left: 2em">
     <summary>More about the sample test</summary>
 
