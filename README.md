@@ -36,7 +36,7 @@ This kata aims to help you become familiar with test-first design, also commonly
     ```
   </details>
 
-- [ ] Run the tests
+- [x] Run the tests
   <details style="padding-left: 2em">
     <summary>More about running tests</summary>
 
