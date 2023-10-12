@@ -22,29 +22,21 @@ function scoreFrame(frame, frame2, frame3) {
   }
   // second to last game strike
   if (frame[0] === 10 && frame2[0] === 10 && frame2[1] === 10) {
-    // console.log('second to last strike')
     return frame[0] + frame2[0] + frame2[1]
   }
   // double strike
   if (frame[0] === 10 && frame2[0] === 10) {
-    // console.log('double strike ')
     return frame[0] + frame2[0] + frame3[0]
   }
-
   // single strike
   if (frame[0] === 10) {
-    // console.log('single strike ')
     return frame[0] + frame2.reduce((a, b) => a + b)
   }
-
   // spare
   if (frame[0] + frame[1] === 10) {
-    // console.log('spare ')
     return frame.reduce((a, b) => a + b) + frame2[0]
   }
-
   // normal sum
-  // else console.log('normal ')
   return frame.reduce((a, b) => a + b)
 }
 
@@ -53,8 +45,6 @@ function gameTotal(game) {
   for (let i = 0; i < game.length; i++) {
     totals += scoreFrame(game[i], game[i + 1], game[i + 2])
   }
-
-  console.log(totals)
-
+  console.log('Final score: ' + totals)
   return totals
 }
