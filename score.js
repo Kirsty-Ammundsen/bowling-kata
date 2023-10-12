@@ -1,8 +1,32 @@
 export { scoreFrame, gameTotal }
 
+const game1 = [
+  [10, 0],
+  [10, 0],
+  [10, 0],
+  [10, 0],
+  [10, 0],
+  [10, 0],
+  [10, 0],
+  [10, 0],
+  [10, 0],
+  [10, 10, 10],
+]
+
+gameTotal(game1)
+
 function scoreFrame(frame, frame2, frame3) {
-  // double strike
+  // last round
+  if (frame[2] < 11) {
+    return frame.reduce((a, b) => a + b)
+  }
+  if (frame[0] === 10 && frame2[0] === 10 && frame2[1] === 10) {
+    // second to last game strike
+    console.log('second to last strike')
+    return frame[0] + frame2[0] + frame2[1]
+  }
   if (frame[0] === 10 && frame2[0] === 10) {
+    // double strike
     console.log('double strike ')
     return frame[0] + frame2[0] + frame3[0]
   }
