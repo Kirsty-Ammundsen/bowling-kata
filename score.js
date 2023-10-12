@@ -1,5 +1,5 @@
 export { scoreFrame }
 
 function scoreFrame(frame) {
-  return 0
+  return frame[0] + frame[1]
 }
